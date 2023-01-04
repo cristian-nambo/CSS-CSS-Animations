@@ -1,3 +1,7 @@
+/*
+Link to Unsolved Repo: https://github.com/HackerUSA-CE/CSS-CSS-Animations.git 
+*/
+
 /****************************************
 * Transform
 ****************************************/
@@ -7,6 +11,8 @@
   width: 20%;
   margin: auto;
   display: inline-block;
+  transform: translate(150px); /* Let's use translate on our .transform-demo > div box to move it 150px to the right on the x-axis. */
+  opacity: 0.5; /* Let's also add some opacity so that we can confirm the hide me text is still behind our box when it moves. */
 }
 
 /****************************************
@@ -18,11 +24,13 @@
   width: 200px;
   height: 200px;
   filter: grayscale(100%);
+  transition: 2s; /* The image is gray now when u hover u give it some time to go from different states. In This case it will take 2 seconds to do so. */
 
 }
 
 .transition-demo img:hover {
-
+  filter: none; /* For our demo, we have two images that are grayscale. We want to make it so that when we hover over the images, they will regain their color. Technically, we can make that happen without using any transitions. Let's do that first by adding a filter property with value none on the hover state of our .transition-demo box. */
+  transform: scale(1.25) rotate(360deg); /* adding to the ending hover state, increasing the size (scale) and making the image rotate. */
 }
 
 /****************************************
@@ -37,9 +45,13 @@
   background-color: palegreen;
 
 }
-
+/* @keyframes: tells CSS we want to define a keyframe
+   sale-bar: what we named the keyframe, this can be whatever name you want. In our case we chose to name it sale-bar
+   To connect the sale-bar keyframe we created, we have to use the animation-name property on the element we want to use it on. We want to use it on our bar, so set it on the .bar class
+*/
 @keyframes sale-bar {
   0% { background-color: lightgreen; width: 450px }
   75% { background-color: #FF033E; width: 125x }
   100% { background-color: crimson; width: 10px }
 }
+We Stopped at animation duration. Please delete me when u reopen me.
