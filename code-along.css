@@ -43,15 +43,19 @@ Link to Unsolved Repo: https://github.com/HackerUSA-CE/CSS-CSS-Animations.git
   width: 500px;
   margin: auto;
   background-color: palegreen;
-
+  animation-name: sale-bar; /* To connect the sale-bar keyframe we created, we have to use the animation-name property on the element we want to use it on. We want to use it on our bar, so set it on the .bar class */
+  animation-duration: 2s; /* setting the animation on the bar to 2 seconds, you will see it when u refresh */
+  animation-fill-mode: forwards; /* with the above duration once its done it snaps back to it original green state, with this to make it keep the final state style we have to set the valu to forwards */
+  animation-delay: 5s; /* without this the animation happens too fast, creating a false sense of urgency so we a delay to the bar */
+  animation-iteration-count: 10;
 }
 /* @keyframes: tells CSS we want to define a keyframe
    sale-bar: what we named the keyframe, this can be whatever name you want. In our case we chose to name it sale-bar
-   To connect the sale-bar keyframe we created, we have to use the animation-name property on the element we want to use it on. We want to use it on our bar, so set it on the .bar class
 */
 @keyframes sale-bar {
-  0% { background-color: lightgreen; width: 450px }
-  75% { background-color: #FF033E; width: 125x }
-  100% { background-color: crimson; width: 10px }
+  0% { background-color: lightgreen; width: 450px}
+  25% { background-color: gold; width: 375px }  /* added 25% and 50% to make the bar transition smoother, you can make as many as you need just look at the pixels and the color to make it smooth */
+  50% { background-color: salmon; width: 250px }
+  75% { background-color: #FF033E; width: 125x; border-radius: 0; transform: scale(1) } /* towards the end add extra animation to make it circular and shrink off the page when its done */
+  100% { background-color: crimson; width: 10px; border-radius: 100%; transform: scale(0) }
 }
-We Stopped at animation duration. Please delete me when u reopen me.
