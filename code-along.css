@@ -47,7 +47,7 @@ Link to Unsolved Repo: https://github.com/HackerUSA-CE/CSS-CSS-Animations.git
   animation-duration: 2s; /* setting the animation on the bar to 2 seconds, you will see it when u refresh */
   animation-fill-mode: forwards; /* with the above duration once its done it snaps back to it original green state, with this to make it keep the final state style we have to set the valu to forwards */
   animation-delay: 5s; /* without this the animation happens too fast, creating a false sense of urgency so we a delay to the bar */
-  animation-iteration-count: 10;
+  animation-iteration-count: 10; /* this is the bonus, just making the bar do it's thing 10 times. */
 }
 /* @keyframes: tells CSS we want to define a keyframe
    sale-bar: what we named the keyframe, this can be whatever name you want. In our case we chose to name it sale-bar
